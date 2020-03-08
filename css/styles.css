@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.beach {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .beach .sky {
+    position: absolute;
+    top: 0;
+    height: 40%;
+    width: 100%;
+    background-color: lightskyblue;
+    z-index: 0; }
+    .beach .sky .sun {
+      position: relative;
+      left: calc(50% - 75px);
+      top: 70%;
+      height: 150px;
+      width: 150px;
+      background-color: gold;
+      box-shadow: 0 10px 20px gold;
+      border-radius: 50%;
+      z-index: 0;
+      cursor: pointer; }
+      .beach .sky .sun:hover {
+        animation: rise 0.5s forwards ease-in-out; }
+  .beach .sea {
+    position: absolute;
+    top: 40%;
+    height: 20%;
+    width: 100%;
+    background-color: royalblue;
+    box-shadow: 0 0 15px gold;
+    z-index: 1; }
+    .beach .sea .wave {
+      position: absolute;
+      width: 100%;
+      background-color: royalblue;
+      z-index: 1; }
+      .beach .sea .wave-one {
+        animation: wave 5s 0s forwards infinite ease-in-out; }
+  .beach .sand {
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+    width: 100%;
+    background-color: darksalmon;
+    z-index: 1; }
+  .beach .me {
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    height: 200px;
+    width: 100px;
+    z-index: 3;
+    cursor: pointer; }
+    .beach .me:hover .back {
+      animation: burn 0.5s forwards ease-in-out; }
+    .beach .me .head {
+      position: relative;
+      left: 20%;
+      height: 40%;
+      width: 60%;
+      border-radius: 40% 40% 50% 50%;
+      background: mistyrose; }
+      .beach .me .head .hair {
+        height: 95%;
+        width: 100%;
+        border-radius: 40% 40% 50% 50%;
+        background-color: wheat; }
+    .beach .me .back {
+      position: relative;
+      left: 20%;
+      height: 60%;
+      width: 60%;
+      border-radius: 15px 15px 10px 10px;
+      background: mistyrose; }
+      .beach .me .back .crease {
+        position: absolute;
+        top: 15%;
+        height: 12%;
+        width: 20%;
+        border-radius: 30%;
+        border-bottom: 2px solid grey; }
+        .beach .me .back .crease-left {
+          left: 20%;
+          border-right: 2px solid grey; }
+        .beach .me .back .crease-right {
+          right: 20%;
+          border-left: 2px solid grey; }
+      .beach .me .back .shorts {
+        position: absolute;
+        bottom: 0;
+        height: 20%;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        background-color: blue; }
+    .beach .me .arm {
+      position: absolute;
+      top: 40%;
+      height: 60%;
+      width: 20%;
+      background-color: mistyrose;
+      border-radius: 10px 10px 30% 30%; }
+      .beach .me .arm-left {
+        left: 0%;
+        transform: rotate(20deg); }
+      .beach .me .arm-right {
+        right: 0%;
+        transform: rotate(-20deg); }
+    .beach .me .hand {
+      position: absolute;
+      bottom: 0;
+      height: 4%;
+      width: 30%;
+      background-color: mistyrose;
+      border-radius: 10px 10px 30% 30%; }
+      .beach .me .hand-left {
+        left: -30%; }
+      .beach .me .hand-right {
+        right: -30%; }
+  .beach .dog {
+    position: absolute;
+    top: calc(50% + 20px);
+    left: calc(33% + 100px);
+    height: 180px;
+    width: 100px;
+    z-index: 2;
+    cursor: pointer; }
+    .beach .dog:hover .tail {
+      animation: wag 0.5s forwards infinite ease-in-out; }
+    .beach .dog .head {
+      position: relative;
+      top: 0;
+      left: 10%;
+      height: 40%;
+      width: 60%;
+      border-radius: 50% 50% 40% 40%;
+      background-color: black; }
+      .beach .dog .head .ear {
+        position: absolute;
+        top: 10%;
+        height: 80%;
+        width: 50%;
+        background-color: black;
+        border-radius: 40%; }
+        .beach .dog .head .ear-left {
+          left: -10%; }
+        .beach .dog .head .ear-right {
+          right: -10%; }
+    .beach .dog .back {
+      position: absolute;
+      top: 38%;
+      left: 10%;
+      height: 62%;
+      width: 60%;
+      border-radius: 20% 20% 10px 10px;
+      background-color: black; }
+    .beach .dog .leg {
+      position: absolute;
+      bottom: 0;
+      height: 20%;
+      width: 20%;
+      border-radius: 10px 10px 20% 20%;
+      background-color: black; }
+      .beach .dog .leg-left {
+        left: 0%; }
+      .beach .dog .leg-right {
+        right: 20%; }
+    .beach .dog .tail {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 8%;
+      width: 60%;
+      border-radius: 0 20% 50% 50%;
+      background-color: black;
+      transform-origin: left; }
+
+@media screen and (max-width: 480px) {
+  .beach .me {
+    left: calc(50% - 80px); }
+  .beach .dog {
+    left: calc(50% + 10px); } }
+
+@keyframes rise {
+  from {
+    transform: translateY(0); }
+  to {
+    transform: translateY(-40px); } }
+
+@keyframes wave {
+  0% {
+    top: 0;
+    border-bottom: 0px solid white;
+    border-radius: 40%; }
+  60% {
+    top: calc(101% - 8px);
+    border-bottom: 8px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20%; }
+  100% {
+    top: calc(100% - 30px);
+    border-bottom: 30px solid rgba(255, 255, 255, 0);
+    border-radius: 0%; } }
+
+@keyframes burn {
+  from {
+    background-color: mistyrose; }
+  to {
+    background-color: pink; } }
+
+@keyframes wag {
+  0% {
+    transform: rotate(0); }
+  50% {
+    transform: rotate(80deg); }
+  100% {
+    transform: rotate(0); } }
